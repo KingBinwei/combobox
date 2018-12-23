@@ -235,8 +235,8 @@
             if (active)
                 active.classList.remove('active');
             newActive.classList.add('active');
-
-            // FIXME: need to ensure focus stays on textbox, but report active list option
+            this.textbox.setActiveDescendant(newActive);
+            // FIXME: need to ensure focus stays on textbox, but report active list option(在textbox被聚焦时屏幕阅读器给出列表选中的信息)
         }
     };
 
